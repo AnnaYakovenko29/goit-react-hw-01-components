@@ -5,13 +5,16 @@ import style from './FriendList.css';
 export const FriendList = () => {
   return (
     <div className='container'>
+        <div className='friendList'>
     {friends.map(({avatar, name, isOnline, id}) =>
-<li key={id}>
-  <div style={{width:'15px', height:'15px', borderRadius:'100%', backgroundColor: isOnline === true ? 'green' : 'red'}}></div>
-  <img src={avatar} alt="" />
-  <p>{name}</p>
+<li className='item' key={id}>
+  <div className='isOnline' style={{ backgroundColor: isOnline === true ? 'green' : 'red'}}></div>
+  <img className='img' src={avatar} alt="" />
+  <p className='title'>{name}</p>
   </li>
+  
   )}
+  </div>
   </div>
   )
 }

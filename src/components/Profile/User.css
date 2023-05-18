@@ -28,7 +28,8 @@
     border-radius: 50%;
     display: block;
     margin-left: auto;
-    margin-right: auto
+    margin-right: auto;
+    background-color: rgb(180, 183, 186);
 }
 
 .name {
