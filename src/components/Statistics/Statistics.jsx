@@ -1,5 +1,5 @@
 import data from '../../source/data.json';
-import style from './Statistics.css';
+import './Statistics.css';
 
 export const Statistics = () => {
   return (

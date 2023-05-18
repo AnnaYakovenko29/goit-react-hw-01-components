@@ -1,5 +1,5 @@
 import items from '../../source/transactions.json';
-import style from './TransactionsHistory.css';
+import './TransactionsHistory.css';
 
 export const TransactionsHistory = () => {
   return (

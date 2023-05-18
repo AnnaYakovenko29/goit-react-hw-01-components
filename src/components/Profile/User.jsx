@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import style from './User.css';
+import './User.css';
 
 export const User = ({ username, tag, location, avatar, stats }) => {
   return (

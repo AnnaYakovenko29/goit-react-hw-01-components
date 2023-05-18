@@ -1,5 +1,5 @@
 import friends from '../../source/friends.json';
-import style from './FriendList.css';
+import './FriendList.css';
 
 export const FriendList = () => {
   return (
