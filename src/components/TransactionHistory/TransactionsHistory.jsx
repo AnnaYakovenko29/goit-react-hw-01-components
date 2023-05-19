@@ -1,7 +1,8 @@
-import items from '../../source/transactions.json';
+import React from 'react';
+import PropTypes from 'prop-types';
 import './TransactionsHistory.css';
 
-export const TransactionsHistory = () => {
+export const TransactionHistory = ({items}) => {
   return (
     <div className="container">
       <table className="transaction-history">
@@ -24,4 +25,13 @@ export const TransactionsHistory = () => {
       </table>
     </div>
   );
+};
+
+TransactionHistory.propTypes = {
+  items: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    type: PropTypes.string.isRequired,
+    amount: PropTypes.number.isRequired,
+    currency: PropTypes.string.isRequired,
+  }).isRequired,
 };

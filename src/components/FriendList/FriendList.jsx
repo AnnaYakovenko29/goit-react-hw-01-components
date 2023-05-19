@@ -1,7 +1,8 @@
-import friends from '../../source/friends.json';
+import React from 'react';
+import PropTypes from 'prop-types';
 import './FriendList.css';
 
-export const FriendList = () => {
+export const FriendList = ({friends}) => {
   return (
     <div className="container">
       <div className="friendList">
@@ -18,4 +19,13 @@ export const FriendList = () => {
       </div>
     </div>
   );
+};
+
+FriendList.propTypes = {
+  friends: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
+    avatar: PropTypes.element.isRequired,
+    isOnline: PropTypes.bool.isRequired,
+  }).isRequired,
 };
