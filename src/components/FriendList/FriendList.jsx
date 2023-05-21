@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './FriendList.css';
 
-export const FriendList = ({friends}) => {
+export const FriendList = ({ friends }) => {
   return (
     <div className="container">
       <div className="friendList">
@@ -22,10 +22,12 @@ export const FriendList = ({friends}) => {
 };
 
 FriendList.propTypes = {
-  friends: PropTypes.shape({
-    id: PropTypes.number.isRequired,
-    name: PropTypes.string.isRequired,
-    avatar: PropTypes.element.isRequired,
-    isOnline: PropTypes.bool.isRequired,
-  }).isRequired,
+  friends: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      name: PropTypes.string.isRequired,
+      avatar: PropTypes.element.isRequired,
+      isOnline: PropTypes.bool.isRequired,
+    }).isRequired
+  ),
 };
